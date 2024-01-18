@@ -36,6 +36,9 @@ jobs:
       - uses: rjstone/discord-webhook-notify@v1
         if: success()
         with:
-            severity: informational
-            details: new version deployed
-            webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+          severity: info
+          username: Pulkitxm
+          color: 'green'
+          avatarUrl: https://avatars.githubusercontent.com/u/65671483?s=400&u=09f5096e645ea9463e13677ba43ed11becd2de84&v=4
+          description: A new version of Pulkitxm/full-stack-open-pokedex deployed.
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
