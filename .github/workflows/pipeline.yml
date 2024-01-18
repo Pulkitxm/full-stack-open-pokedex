@@ -23,9 +23,12 @@ jobs:
       - uses: rjstone/discord-webhook-notify@v1
         if: failure()
         with:
-            severity: error
-            details: build failed
-            webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+          severity: error
+          username: Pulkitxm
+          color: 'green'
+          avatarUrl: https://avatars.githubusercontent.com/u/65671483?s=400&u=09f5096e645ea9463e13677ba43ed11becd2de84&v=4
+          description: Build failed at Pulkitxm/full-stack-open-pokedex deployed.
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       - name: test
         run: npm run test
       - name: e2e tests
